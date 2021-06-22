@@ -28,6 +28,10 @@ Feature: My Accounts page feature
     |Your Transactions              |
     |Recurring payments             |
 
+  @accounts
+  Scenario: Dummy failure scenario test
+    Then Dummy failure step
+
 #  Commented below scenario outline to reduce the unnecessary login attempts during test execution
 #  Scenario Outline: Verify dropdown menus in list group section
 #    Given User lands in My Accounts page having title "My Account"

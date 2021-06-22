@@ -50,5 +50,11 @@ public class MyAccountPageSteps {
         Assert.assertEquals(expectedMenuLabel,actualMenuLabel);
     }
 
+    @Then("Dummy failure step")
+    public void test_dummyFailure() {
+        boolean flag=true;
+        Assert.assertFalse(flag);
+    }
+
 
 }

@@ -32,20 +32,20 @@ Feature: My Accounts page feature
   Scenario: Dummy failure scenario test
     Then Dummy failure step
 
-#  Commented below scenario outline to reduce the unnecessary login attempts during test execution
-#  Scenario Outline: Verify dropdown menus in list group section
-#    Given User lands in My Accounts page having title "My Account"
-#    Then User verfies the dropdown menu '<Dropdown Menu Label>'
-#    Examples:
-#    |Dropdown Menu Label|
-#    |Desktops           |
-#    |Laptops & Notebooks|
-#    |Components         |
-#    |Tablets            |
-#    |Software           |
-#    |Phones & PDAs      |
-#    |Cameras            |
-#    |MP3 Players        |
+  @accounts @Skip
+  Scenario Outline: Verify dropdown menus in list group section
+    Given User lands in My Accounts page having title "My Account"
+    Then User verfies the dropdown menu '<Dropdown Menu Label>'
+    Examples:
+    |Dropdown Menu Label|
+    |Desktops           |
+    |Laptops & Notebooks|
+    |Components         |
+    |Tablets            |
+    |Software           |
+    |Phones & PDAs      |
+    |Cameras            |
+    |MP3 Players        |
 
 
 

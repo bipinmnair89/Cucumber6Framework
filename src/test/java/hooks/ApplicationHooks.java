@@ -1,6 +1,7 @@
 package hooks;
 
 import driver.DriverFactory;
+import org.junit.Assume;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -20,6 +21,12 @@ public class ApplicationHooks {
     private Properties prop;
 
     //In @Before annotation the order executed is in ascending(1 - 2 - 3)
+
+    @Before(value="@Skip", order = 0)
+    public void setup_skippedHook(Scenario scenario) {
+        System.out.println("The scenario being skipped is : "+scenario.getName());
+        Assume.assumeTrue(false);
+    }
     @Before(order = 1)
     public void readProp() {
         configReader = new ConfigReader();
